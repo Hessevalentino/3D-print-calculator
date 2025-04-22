@@ -1,0 +1,185 @@
+/* Main Styles for 3D Print Calculator */
+:root {
+    --primary-color: #7e57c2;
+    --secondary-color: #5e35b1;
+    --dark-bg: #121212;
+    --dark-surface: #1e1e1e;
+    --dark-card: #252525;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --success-color: #4caf50;
+    --info-color: #2196f3;
+    --warning-color: #ff9800;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease;
+}
+
+.calculator-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: var(--dark-card);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.calculator-container:hover {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+    filter: invert(1) brightness(1.1) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+.logo-container a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.logo-container a:hover {
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-control {
+    background-color: var(--dark-surface);
+    border: 1px solid #333;
+    color: var(--text-primary);
+    border-radius: 5px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: rgba(126, 87, 194, 0.25);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(126, 87, 194, 0.35);
+    color: #e0e0e0; /* Svetlejší text pre lepšiu čitateľnosť */
+}
+
+label {
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 500;
+}
+
+.btn-calculate {
+    background: linear-gradient(135deg, #7e57c2 0%, #5e35b1 100%);
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-calculate:hover {
+    background: linear-gradient(135deg, #9575cd 0%, #7e57c2 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-calculate:active {
+    transform: translateY(0);
+}
+
+.results-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(126, 87, 194, 0.1);
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.result-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.result-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.result-label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+}
+
+.result-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.material-cost .result-value {
+    color: var(--info-color);
+}
+
+.print-cost .result-value {
+    color: var(--warning-color);
+}
+
+.electricity-cost .result-value {
+    color: #9c27b0; /* Fialová farba pre cenu elektriny */
+}
+
+.total-cost .result-value {
+    color: var(--success-color);
+}
+
+/* Animation classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+.pulse {
+    animation: pulse 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .calculator-container {
+        margin: 20px;
+        padding: 20px;
+    }
+}
