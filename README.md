@@ -7,7 +7,7 @@
 
 A modern, elegant calculator for 3D printing costs with a dark-themed UI. Calculate material costs, printing time costs, electricity costs, and total expenses for your 3D printing projects.
 
-![3D Print Calculator Screenshot](https://via.placeholder.com/800x450.png?text=3D+Print+Calculator+Screenshot)
+![3D Print Calculator Screenshot](https://via.placeholder.com/imgscreen.png?text=3D+Print+Calculator+Screenshot)
 
 ## ✨ Features
 
